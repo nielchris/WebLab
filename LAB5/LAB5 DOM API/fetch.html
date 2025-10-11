@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List (CRUD + Fetch API)</title>
+
+  <!-- ✅ CONNECT CSS -->
+  <link rel="stylesheet" href="api.css" />
+  <style>
+    /* Optional quick styling for better usability */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    input[type="text"] {
+      flex: 2;
+    }
+    input[type="date"] {
+      flex: 1;
+    }
+    button {
+      flex: 1;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .todo-list .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #f1f1f1;
+      border-radius: 5px;
+    }
+    .task-info span {
+      margin-right: 10px;
+    }
+    .edit-btn, .delete-btn {
+      margin-left: 5px;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .edit-btn { background-color: #2196F3; color: white; }
+    .delete-btn { background-color: #f44336; color: white; }
+    .edit-btn:hover { background-color: #1976D2; }
+    .delete-btn:hover { background-color: #d32f2f; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🗓️ To-Do List Manager</h1>
+
+    <!-- ✅ Create Form -->
+    <form id="todoForm">
+      <input type="text" id="title" placeholder="Enter task..." required />
+      <input type="date" id="date" required />
+      <button type="submit">Add Task</button>
+    </form>
+
+    <hr>
+
+    <!-- ✅ Display Tasks -->
+    <div id="todoList" class="todo-list"></div>
+  </div>
+
+  <!-- ✅ CONNECT JS -->
+  <script src="doms.js"></script>
+</body>
+</html>
+
