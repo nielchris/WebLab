@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>✈ Flight Scheduling Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="uep_logo.png" alt="Flight Logo">
+      <h2>FLY HIGH</h2>
+    </div>
+    <nav>
+      <a href="#" class="active">Dashboard</a>
+      <a href="#">Flights</a>
+      <a href="#">Destinations</a>
+      <a href="#">Reports</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div class="date">Today: <span id="today-date"></span></div>
+    </header>
+
+    <section class="overview">
+      <div class="card">
+        <h3 id="flight-count">3</h3>
+        <p>Total Flights</p>
+      </div>
+      <div class="card">
+        <h3 id="delayed-count">1</h3>
+        <p>Delayed Flights</p>
+      </div>
+      <div class="card">
+        <h3 id="destination-count">3</h3>
+        <p>Destinations</p>
+      </div>
+    </section>
+
+    <section class="details">
+      <h2>Flight Schedule Overview</h2>
+      <div id="output">Click a button to see details...</div>
+
+      <div class="controls">
+        <button onclick="showAverageDuration()">Average Duration</button>
+        <button onclick="showDelayedFlights()">Delayed Flights</button>
+        <button onclick="showLongestFlight()">Longest Flight</button>
+        <button onclick="showGroupedFlights()">Group by Destination</button>
+        <button onclick="fetchFlights()">Fetch New Flights (Async)</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

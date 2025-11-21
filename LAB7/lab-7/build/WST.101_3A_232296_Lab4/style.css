@@ -1,0 +1,108 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; display: flex; }
+
+.sidebar {
+  width: 250px;
+  background: #02372b;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  min-height: 100vh;
+}
+.sidebar .logo img {
+  width: 80px;
+  border-radius: 50%;
+}
+.sidebar .logo h2 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.sidebar nav {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.sidebar nav a {
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background: #064e3b;
+}
+.sidebar .logout {
+  margin-top: auto;
+  background: #b91c1c;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  width: 80%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 1;
+  background: #f9fafb;
+  padding: 20px;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  background: #064e3b;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+.overview {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+.card {
+  flex: 1;
+  background: #022c22;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+.card h3 {
+  font-size: 2rem;
+}
+
+.details {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+.controls {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.controls button {
+  padding: 10px 15px;
+  border: none;
+  background: #064e3b;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.controls button:hover {
+  background: #022c22;
+}
+#output {
+  margin-top: 10px;
+  white-space: pre-wrap;
+  background: #f3f4f6;
+  padding: 10px;
+  border-radius: 6px;
+  min-height: 80px;
+}
